@@ -1,9 +1,6 @@
-import { Builder, By, Capabilities, Key, until } from "selenium-webdriver";
-import chrome from "selenium-webdriver/chrome";
+import { Builder, By, until } from "selenium-webdriver";
 import firefox from "selenium-webdriver/firefox";
 import dotenv from "dotenv";
-import fs from "fs";
-import path from "path";
 
 dotenv.config();
 
