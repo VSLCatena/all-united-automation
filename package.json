@@ -4,7 +4,7 @@
   "description": "Automation of the member synchronisation",
   "main": "index.ts",
   "scripts": {
-    "start": "tsc && node index.js",
+    "start": "tsc && node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan van Overbeek",
