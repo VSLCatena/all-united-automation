@@ -11,5 +11,6 @@ COPY . .
 ENV SYSTEMNAME=my-system-name
 ENV USERNAME=my-username
 ENV PASSWORD=my-password
+ENV DOWNLOAD_LOCATION=my-download-location
 
 CMD [ "npm", "start" ]
