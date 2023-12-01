@@ -1,6 +1,6 @@
 # Containerized All United Automation
 This is a simple script that uses selenium to access data from All United for further automation.
-It acts as a user because thats the only way to access the data.
+It acts as an user because thats the only way to access the data.
 
 ## Selenium
 Selenium is a tool that allows you to automate browser actions.
