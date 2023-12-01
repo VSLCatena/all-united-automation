@@ -39,6 +39,7 @@ async function login(driver: WebDriver) {
 
     // Waits for the next page to load before returning
     await driver.wait(until.stalenessOf(loginForm));
+    // TODO: Handle login errors and forced password changes
 }
 
 async function navigateToAllMembersPage(driver: WebDriver) {
