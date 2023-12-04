@@ -1,4 +1,4 @@
-import cron from 'cron';
+import { CronJob } from 'cron';
 import axios from 'axios';
 import dotenv from "dotenv";
 import express from "express";
@@ -15,7 +15,8 @@ app.get("/health", (req, res) => {
 app.use('/synchronise', SynchronizationRouter);
 
 // Runs every day at midnight
-const cronJob = new cron.CronJob('0 0 0 * * *', () => {
+const cronJob = new CronJob('0 0 0 * * *', () => {
+    console.info('Started cron job');
     let retryCount = 0;
     const executeCronJob = async () => {
         try {
@@ -37,6 +38,6 @@ const cronJob = new cron.CronJob('0 0 0 * * *', () => {
 });
 
 app.listen(process.env.PORT, () => {
-    console.log(`API up and running at http://localhost:${process.env.PORT}`);
+    console.info(`API up and running at http://localhost:${process.env.PORT}`);
     cronJob.start();
 });
