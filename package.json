@@ -2,9 +2,10 @@
   "name": "all-united-automation",
   "version": "1.0.0",
   "description": "Automation of the member synchronisation",
-  "main": "index.ts",
+  "main": "Index.ts",
   "scripts": {
-    "start": "tsc && node ./dist/index.js",
+    "dev": "nodemon Index.ts",
+    "prod": "rm -rf ./dist && tsc && node ./dist/Index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan van Overbeek",
