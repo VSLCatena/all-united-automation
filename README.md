@@ -14,3 +14,8 @@ After that be sure to `npm install` the packages.
 ```npm run start``` to run the script which is always headless (No browser).<br>
 If you want to run it with a visible browser comment the headless option ```.addArguments("--headless") // Comment when testing locally```
 inside `index.ts`.
+
+### Build
+For local use ```npm run build``` to build the project.<br>
+For docker use: <br>
+```docker build -t vslcatena/synchronisation-api -f Dockerfile.prod .```
