@@ -1,8 +1,19 @@
 import { Builder, By, WebDriver, until } from "selenium-webdriver";
 import firefox from "selenium-webdriver/firefox";
 import dotenv from "dotenv";
+import express from "express";
 
 dotenv.config();
+
+const app = express();
+
+app.get("/health", (req, res) => {
+    res.send("API is healthy!");
+});
+
+app.listen(process.env.PORT, () => {
+    console.log(`API up and running at http://localhost:${port}`);
+});
 
 async function createDriver(): Promise<WebDriver> {
     let options = new firefox.Options()
